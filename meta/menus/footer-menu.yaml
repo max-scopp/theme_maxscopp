@@ -1,0 +1,33 @@
+name: 'Footer Menu'
+items:
+    -
+        title: About
+        nesting: '0'
+        type: static-page
+        code: ''
+        reference: home
+        replace: '0'
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Blog
+        type: cms-page
+        code: ''
+        reference: blog
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Imprint
+        nesting: '0'
+        type: static-page
+        code: ''
+        reference: imprint
+        replace: '0'
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'

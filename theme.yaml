@@ -1,0 +1,8 @@
+name: 'maxscopp'
+description: 'October theme for maxscopp.de'
+author: 'Maximilian Scopp'
+homepage: 'https://maxscopp.de'
+code: maxscopp
+form: fields.yaml
+require:
+    - RainLab.Blog

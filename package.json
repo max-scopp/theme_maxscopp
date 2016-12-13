@@ -1,0 +1,33 @@
+{
+  "name": "maxscopp",
+  "version": "1.0.0",
+  "description": "A theme for maxscopp.de",
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "component-webpack-plugin": "^0.2.1",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.0.0",
+    "gulp-jshint": "^2.0.4",
+    "gulp-load-plugins": "^1.4.0",
+    "gulp-sass": "^3.0.0",
+    "gulp-sourcemaps": "^1.9.1",
+    "gulp-stream": "0.0.2",
+    "gulp-uglify": "^2.0.0",
+    "gulp-uglifycss": "^1.0.6",
+    "gulp-util": "^3.0.7",
+    "jshint": "^2.9.4",
+    "webpack": "^1.14.0",
+    "webpack-stream": "^3.2.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "sass",
+    "js"
+  ],
+  "author": "Maximilian Scopp",
+  "license": "MIT"
+}

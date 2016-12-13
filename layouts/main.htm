@@ -1,0 +1,38 @@
+description = "Normal Page"
+
+[staticMenu mainMenu]
+code = "primary-menu"
+==
+<html lang="en">
+<head>
+    {% partial "html_base/meta_head" %}
+</head>
+<body>
+    <div id="body">
+        {% partial "all_pages/header" %}
+        {% partial "all_pages/navigation" %}
+        
+        <div id="main">
+            {% page %}
+
+            {% if this.theme.show_section_one %}
+                {% partial "home_page/section_one" %}
+            {% endif %}
+
+            {% if this.theme.show_section_two %}
+                {% partial "home_page/section_two" %}
+            {% endif %}
+
+            {% if this.theme.show_section_three %}
+                {% partial "home_page/section_three" %}
+            {% endif %}
+
+            {% if this.theme.show_section_four %}
+                {% partial "home_page/section_four" %}
+            {% endif %}
+        </div>
+        {% partial "all_pages/footer" %}
+    </div>
+    {% partial "html_base/scripts" %}
+</body>
+</html>

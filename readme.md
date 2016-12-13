@@ -1,0 +1,4 @@
+## Maxscopp Theme
+
+#### License
+MIT
