@@ -2,17 +2,9 @@
 <nav class="header-nav">
 <ul class="header-nav-inner">
     {% for item in mainMenu.menuItems %}
-	{{ dump(item.url) }}
-        <li class="{{ item.isActive or item.isChildActive ? 'active' : '' }} {{ item.items ? 'dropdown' : '' }}">
-            <a 
-                {% if item.items %}class="dropdown-toggle" data-toggle="dropdown"{% endif %} 
-                href="/{{ item.url }}"
-            >
-                {{ item.title }}
-
-                {% if item.items %}<span class="caret"></span>{% endif %}
-            </a>
-        </li>
+            <li class="{{ item.isActive or item.isChildActive ? 'active' : '' }} {{ item.items ? 'dropdown' : '' }}">
+                <a href="{{ item.url }}">{{ item.title }}</a>
+            </li>
     {% endfor %}
 </ul>
 </nav>

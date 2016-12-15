@@ -11,9 +11,14 @@ var webpack = require('webpack-stream');
 var uglifycss = require('gulp-uglifycss');
 
 
+var watch = {
+    js: 'src/js/**/*.js',
+    sass: 'src/scss/**/*.scss'
+};
+
 var input = {
-    js: ['assets/js/**/*.js', 'main.js'],
-    sass: 'assets/scss/**/*.scss'
+    js: 'src/js/main.js',
+    sass: 'src/scss/*.scss'
 };
 
 var output = {
@@ -27,34 +32,41 @@ gulp.task('build-css', function() {
     gulp.src(input.sass)
         .pipe(sourcemaps.init())
             .pipe(sass())
-            .pipe(concat('all.css'))
             .pipe(uglifycss())
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(output.css))
-        .pipe(connect.reload());
 });
 
 // Webpack JS/JSX with babel loader
 gulp.task('build-js', function() {
-    gulp.src(input.js[1])
+    gulp.src(input.js)
         .pipe(sourcemaps.init())
             .pipe(webpack({
                 module: {
-                    loaders: [
-                        {loader: 'babel-loader'}
-                    ]
-                }
+
+          loaders: [
+            {
+              test: /\.js$/,
+              loader: 'babel',
+              query: {
+                presets: ['es2015']
+              }
+            }
+          ]
+
+                },
+		output: {
+			filename: '[name].js',
+		}
             }))
-            .pipe(concat('all.js'))
             .pipe(uglify())
         .pipe(sourcemaps.write())
-        .pipe(gulp.dest(output.js[0]))
-        .pipe(connect.reload());
+        .pipe(gulp.dest(output.js))
 });
 
 gulp.task('watch', ['build-js', 'build-css'],function() {
-    gulp.watch(input.js[0], ['build-js']);
-    gulp.watch(input.sass, ['build-css']);
+    gulp.watch(watch.js, ['build-js']);
+    gulp.watch(watch.sass, ['build-css']);
 });
 
 gulp.task('default', ['build-js', 'build-css', 'watch']);

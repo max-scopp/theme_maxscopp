@@ -4,7 +4,7 @@
     <meta name="description" content="{{ this.page.meta_description|default(this.theme.description) }}">
     <meta name="keywords" content="{{ this.theme.keywords }}">
     <meta name="author" content="{{ this.theme.website_author }}">
-    <title>{{ this.theme.website_name }} - {{ this.page.meta_title|default(this.page.title) }}</title>
+    <title>{{ this.page.meta_title|default(this.page.title) }} &mdash; {{ this.theme.website_name }}</title>
     <link rel="canonical" href="{{ this.theme.website_url }}" />
     <link rel="icon" type="image/png" href="{{ 'assets/img/icon.png'|theme }}" />
 

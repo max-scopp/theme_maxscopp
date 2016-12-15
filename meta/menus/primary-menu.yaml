@@ -1,23 +1,23 @@
 name: 'Primary Menu'
 items:
     -
-        title: About
-        nesting: ''
-        type: cms-page
-        url: ''
+        title: Portfolio
+        nesting: '0'
+        type: static-page
         code: ''
         reference: home
-        cmsPage: ''
-        replace: ''
+        replace: '0'
         viewBag:
             isHidden: '0'
             cssClass: ''
             isExternal: '0'
     -
         title: Blog
-        type: cms-page
+        nesting: '0'
+        type: static-page
         code: ''
         reference: blog
+        replace: '0'
         viewBag:
             isHidden: '0'
             cssClass: ''

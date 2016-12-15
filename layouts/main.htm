@@ -2,6 +2,8 @@ description = "Normal Page"
 
 [staticMenu mainMenu]
 code = "primary-menu"
+
+[staticPage]
 ==
 <html lang="en">
 <head>
@@ -12,24 +14,8 @@ code = "primary-menu"
         {% partial "all_pages/header" %}
         {% partial "all_pages/navigation" %}
         
-        <div id="main">
+        <div id="main" role="main">
             {% page %}
-
-            {% if this.theme.show_section_one %}
-                {% partial "home_page/section_one" %}
-            {% endif %}
-
-            {% if this.theme.show_section_two %}
-                {% partial "home_page/section_two" %}
-            {% endif %}
-
-            {% if this.theme.show_section_three %}
-                {% partial "home_page/section_three" %}
-            {% endif %}
-
-            {% if this.theme.show_section_four %}
-                {% partial "home_page/section_four" %}
-            {% endif %}
         </div>
         {% partial "all_pages/footer" %}
     </div>

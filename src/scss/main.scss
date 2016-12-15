@@ -1,3 +1,11 @@
-:root {
-	color: red;
-}
+/**
+ * Main entry file for each sass module.
+ * @author Maximilian Scopp <me@maxscopp.de>
+ */
+//
+// Grid
+@import "../_libraries/profoundgrid/sass/grid/grid";
+@import "base/config/grid";
+//
+// Base setup
+@import "../_libraries/normalize.css/normalize.css";
